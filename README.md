@@ -9,18 +9,20 @@ Jdk 1.8
 ##运行步骤
 执行 TestStarter 类中的 main() 方法即可在控制台看到效果
 ##目录结构描述
-├── gobang
-    ├── algorithm
-    │   ├── ai
-    │   │   ├── AiAlgorithms.java           // 逻辑AI算法
-    │   │   ├── GamingInfo.java             // 游戏过程信息
-    │   │   ├── PatternChecker.java         // 棋型算法
-    │   │   ├── PatternEnum.java            // 棋型以及评分
-    │   │   └── PieceType.java              // 棋位棋子类型
-    │   ├── CommonAlgorithms.java           // 棋盘相关公共算法
-    │   └── RenjuChecker.java               // 连珠算法
-    ├── bean
-    │   ├── ColorEnum.java                  // 棋位棋子颜色
-    │   ├── DirectionEnum.java              // 二维棋盘四个方向
-    │   └── Position.java                   // 棋位坐标，有内部类
-    └── TestStarter.java                    // 自动下棋测试类
+``` lua
+gobang
+├── algorithm
+│   ├── ai
+│   │   ├── AiAlgorithms.java            逻辑AI算法
+│   │   ├── GamingInfo.java              游戏过程信息
+│   │   ├── PatternChecker.java          棋型算法
+│   │   ├── PatternEnum.java             棋型以及评分
+│   │   └── PieceType.java               棋位棋子类型
+│   ├── CommonAlgorithms.java            棋盘相关公共算法
+│   └── RenjuChecker.java                连珠算法
+├── bean
+│   ├── ColorEnum.java                   棋位棋子颜色
+│   ├── DirectionEnum.java               二维棋盘四个方向
+│   └── Position.java                    棋位坐标，有内部类
+└── TestStarter.java                     自动下棋测试类
+```
