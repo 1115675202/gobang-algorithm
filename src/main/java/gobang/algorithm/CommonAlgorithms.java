@@ -103,7 +103,7 @@ public class CommonAlgorithms {
 	 * @param toInitialPoint true：往左上/下角、往左/上；false：往右上/下角、往右/下
 	 * @param init           初始值
 	 * @param offsetNum      偏移棋位
-	 * @return
+	 * @return X 轴坐标值
 	 */
 	private static int xAfterOffset(DirectionEnum direction, boolean toInitialPoint, int init, int offsetNum) {
 		switch (direction) {
@@ -125,7 +125,7 @@ public class CommonAlgorithms {
 	 * @param toInitialPoint true：往左/竖直方向往下；false：往右/竖直方向往上
 	 * @param init           初始值
 	 * @param offsetNum      偏移棋位
-	 * @return
+	 * @return Y 轴坐标值
 	 */
 	private static int yAfterOffset(DirectionEnum direction, boolean toInitialPoint, int init, int offsetNum) {
 		switch (direction) {
@@ -146,7 +146,7 @@ public class CommonAlgorithms {
 	 *
 	 * @param position       棋位坐标
 	 * @param chessBoardInfo 棋盘信息
-	 * @return
+	 * @return -
 	 */
 	public static int chessPieceTypeIn(Position position, int[][] chessBoardInfo) {
 		return chessBoardInfo[position.getX()][position.getY()];

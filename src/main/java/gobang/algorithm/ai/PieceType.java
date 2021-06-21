@@ -16,7 +16,7 @@ class PieceType {
 	/**
 	 * 空位
 	 */
-	static final int _ = 0;
+	static final int E = 0;
 
 	/**
 	 * 己方棋子

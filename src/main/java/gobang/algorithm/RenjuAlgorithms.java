@@ -5,7 +5,6 @@ import gobang.bean.DirectionEnum;
 import gobang.bean.Position;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 import static gobang.algorithm.CommonAlgorithms.afterOffSet;
 import static gobang.algorithm.CommonAlgorithms.isSameColorChess;
@@ -37,10 +36,7 @@ public class RenjuAlgorithms {
 				calculateAllRenjuStartAt(originPosition, boardInfo, piecesColor, WIN_RENJU_NUM);
 
 		return renjuMap.isEmpty() ? Collections.emptyList() :
-				renjuMap
-						.values()
-						.stream()
-						.collect(Collectors.toList());
+				new ArrayList<>(renjuMap.values());
 	}
 
 	/**
@@ -50,7 +46,7 @@ public class RenjuAlgorithms {
 	 * @param boardInfo      棋盘[x][y] 每个点的值决定是否有棋及棋子颜色
 	 * @param piecesColor    棋子颜色
 	 * @param minRenjuNum    最小连珠数，一条线上的连珠数大于等于最小连珠数才会返回
-	 * @return
+	 * @return k-方向 v-连珠列表
 	 */
 	private static Map<DirectionEnum, List<Position>> calculateAllRenjuStartAt(
 			Position originPosition, int[][] boardInfo, ColorEnum piecesColor, int minRenjuNum) {
