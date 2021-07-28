@@ -35,8 +35,12 @@ public class AiAlgorithms {
             int[][] boardInfo, ColorEnum ownColor, ColorEnum opponentColor) {
         long a = System.currentTimeMillis();
         GAMING_INFO.set(new GamingInfo(Objects.requireNonNull(boardInfo), ownColor, opponentColor));
-        Position bestPosition = findBestPosition();
-        GAMING_INFO.remove();
+        Position bestPosition;
+        try {
+            bestPosition = findBestPosition();
+        } finally {
+            GAMING_INFO.remove();
+        }
         System.out.println(System.currentTimeMillis() - a);
         return bestPosition;
     }
